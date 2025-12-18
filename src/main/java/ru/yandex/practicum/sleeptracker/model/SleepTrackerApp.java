@@ -21,7 +21,10 @@ public class SleepTrackerApp {
                     new MinSessionDurationAnalysis(),  //мин. продолжительность сна
                     new MaxSessionDurationAnalysis(),  //макс. продолжительность сна
                     new AverageSessionDurationAnalysis(),  //средняя продолжительность сна
-                    new BadQualitySessionsAnalysis() //кол-во сессий с плохим качеством сна
+                    new BadQualitySessionsAnalysis(), //кол-во сессий с плохим качеством сна
+                    new SleepLessNightsAnalysis(), //кол-во бессонных ночей
+                    new UserChronotypeAnalysis() //анализ хронотипа пользователя
+
             );
 
     public static void main(String[] args) {
