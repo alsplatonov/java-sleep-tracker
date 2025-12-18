@@ -16,14 +16,14 @@ public class AverageSessionDurationAnalysis
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
 
-        double AverageDuration = sessions.stream()
+        double averageDuration = sessions.stream()
                 .mapToInt(SleepingSession::getDurationMinutes)
                 .average()
                 .orElse(0.0);
 
         return new SleepAnalysisResult(
                 "Средняя продолжительность сессии (мин)",
-                Math.round(AverageDuration)
+                Math.round(averageDuration)
         );
     }
 }
