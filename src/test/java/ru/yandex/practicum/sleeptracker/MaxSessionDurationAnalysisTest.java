@@ -6,6 +6,7 @@ import ru.yandex.practicum.sleeptracker.model.SleepAnalysisResult;
 import ru.yandex.practicum.sleeptracker.model.SleepQuality;
 import ru.yandex.practicum.sleeptracker.model.SleepingSession;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,8 +35,8 @@ public class MaxSessionDurationAnalysisTest {
     }
 
     private SleepingSession session(int durationMinutes) {
-        var start = java.time.LocalDateTime.of(2025, 12, 16, 23, 0);
-        var end = start.plusMinutes(durationMinutes);
+        LocalDateTime start = java.time.LocalDateTime.of(2025, 12, 16, 23, 0);
+        LocalDateTime end = start.plusMinutes(durationMinutes);
 
         return new SleepingSession(start, end, SleepQuality.GOOD);
     }
